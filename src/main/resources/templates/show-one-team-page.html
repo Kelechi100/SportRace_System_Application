@@ -1,0 +1,26 @@
+<hmtl xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+		
+		<p> Here is Products number:</p>
+		<table border = "1">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Points</th>
+					
+				</tr>
+				<tr th:each = "temp: ${mypackage}">
+		
+					<td th:text="${temp.getIdt()}"></td>
+					<td  th:text="${temp.getName()}"></td>
+					<td  th:text="${temp.getPoints()}"></td>
+					
+					
+				</tr>
+			</table>
+		
+	</body>
+	
+		
+</hmtl>

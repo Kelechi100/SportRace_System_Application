@@ -1,0 +1,32 @@
+<hmtl xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+		
+		<p> Please insert Team data: </p>
+		
+		<form th:action="@{/team/crud/delete/__${id}__}" th:object="${team}" method="post" >
+			
+			<table>
+				<tr>
+					<td>name:</td>
+					<td> <input type="text" th:field="*{name}" /> </td>
+				</tr>
+				
+				<tr>
+					<td>points:</td>
+					<td> <input type="text" th:field="*{points}" /> </td>
+				</tr>
+				
+				
+				
+				
+			</table>
+			<input type="submit" value="Save" >
+			
+		</form>
+		
+		
+	</body>
+	
+		
+</hmtl>

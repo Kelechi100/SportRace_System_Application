@@ -1,0 +1,35 @@
+<hmtl xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+		
+		<p> Please insert Team data: </p>
+		
+		<form th:action="@{/team/crud/create}" th:object="${team}" method="post" >
+			
+			<table>
+				<tr>
+					<td>name:</td>
+					<td> <input type="text" th:field="*{name}" /> </td>
+					<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" > </td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td>points:</td>
+					<td> <input type="text" th:field="*{points}" /> </td>
+					<td th:if="${#fields.hasErrors('points')}" th:errors="*{points}" > </td>
+				</tr>
+				
+			
+				
+			</table>
+			<input type="submit" value="Save" >
+			
+		</form>
+		
+		
+	</body>
+	
+		
+</hmtl>
